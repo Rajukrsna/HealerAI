@@ -63,3 +63,31 @@ Include these in .env file in backend
 MONGO_URI=your mongodb connection string
 JWT_SECRET=your jwt secret token
 ```
+## 🚀 Future Scope
+
+- Add 100+ detailed yoga poses and guided meditation practices.
+- Improve accuracy of the emotion detection system.
+- Integrate all 64 human emotions with descriptive guidance and AI-powered healing practices.
+- Implement habit tracking and emotional progress charts.
+- Introduce a personalized profile system to track emotional journeys.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions!  
+If you'd like to improve HealerAI, feel free to fork this repository and submit a pull request.
+
+---
+
+## 📬 Contact
+
+If you have any feedback, suggestions, or just want to connect:
+
+- 📧 Email: tmpravinraju@gmail.com  
+
+---
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
