@@ -4,8 +4,10 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import PublicIcon from "@mui/icons-material/Public";
+import { useNavigate } from "react-router-dom";
 import health from "../assets/health.jpg"; // Replace with your image path  
 const YogaLandingPage = () => {
+  const navigate = useNavigate();
   return (
     <Box sx={{ bgcolor: "#FDF6F0", minHeight: "100vh", fontFamily: "sans-serif" }}>
     
@@ -27,9 +29,14 @@ const YogaLandingPage = () => {
         </Grid>
 
         {/* Book Now Button */}
-        <Button variant="contained" sx={{ bgcolor: "#FFC107", mt: 3, px: 4, py: 1.5, fontSize: 18, fontWeight: "bold" }}>
-          Enter the World
-        </Button>
+        <Button
+  variant="contained"
+  sx={{ bgcolor: "#FFC107", mt: 3, px: 4, py: 1.5, fontSize: 18, fontWeight: "bold" }}
+  onClick={() => navigate("/findemotion")}
+>
+  Enter the World
+</Button>
+
       </Container>
 
       {/* Event Info Card */}

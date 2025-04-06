@@ -12,6 +12,9 @@ import ColorModeSelect from "./theme/ColorModeSelect";
 import { Stack } from "@mui/material";
 import FindEmotion from "./pages/FindEmotion";
 import Description from "./pages/Description"
+import Practice from "./pages/Practice";  
+import SignInSide from "./pages/SignInSide";  
+import SignUp from "./pages/SignUp";  
 const App = () => {
     return (
        <AppTheme>
@@ -44,10 +47,13 @@ const App = () => {
                 <Navbar/>
                 <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/login" element={<SignInSide />} />
+                <Route path="/register" element={<SignUp />} />
                 <Route path="/findemotion" element={<FindEmotion />} />
                 <Route path="/myjournal" element={<MentalHealthJournal />} />
                 <Route path="/getmeditation" element={<BreathingExercise />} />
                 <Route path ="/description" element={<Description />} />
+                <Route path="/practice" element={<Practice />} />   
                 </Routes>
 
                 {/* Chatbot (Always Visible) */}

@@ -1,0 +1,11 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="95" stroke="#9AD0C2" stroke-width="10" fill="#FDF6F0"/>
+  <text x="50%" y="48%" text-anchor="middle" fill="#4A4A4A" font-size="22" font-family="Verdana" font-weight="bold">Healer</text>
+  <text x="50%" y="64%" text-anchor="middle" fill="#5EAAA8" font-size="20" font-family="Verdana">AI</text>
+  <path d="M100 135 C 85 120, 115 120, 100 135 Z" fill="#5EAAA8"/> <!-- Smile -->
+  <circle cx="85" cy="110" r="5" fill="#4A4A4A"/> <!-- Left eye -->
+  <circle cx="115" cy="110" r="5" fill="#4A4A4A"/> <!-- Right eye -->
+  <path d="M100 60 C 90 50, 110 50, 100 60 Z" fill="#9AD0C2"/> <!-- Lotus petal top -->
+  <path d="M80 70 C 70 60, 85 55, 80 70 Z" fill="#9AD0C2"/>
+  <path d="M120 70 C 130 60, 115 55, 120 70 Z" fill="#9AD0C2"/>
+</svg>

@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; 
 import {
   Box,
   Typography,
@@ -8,12 +9,13 @@ import {
   CardMedia,
   Grid,
   Divider,
+  Button
 } from "@mui/material";
 
 const Description = () => {
   const location = useLocation();
   const emotions = location.state?.emotions || {};
-
+const navigate = useNavigate(); // Initialize navigate
   console.log("Emotions data:", emotions); // Debugging
 
   return (
@@ -49,6 +51,17 @@ const Description = () => {
                   <Typography variant="body2" color="text.secondary">
                     {poseData.description}
                   </Typography>
+                  <Button variant="dark" onClick = {
+                    () => {  
+                      
+                     // const yogaData = emotions.poses[poseName];
+                      navigate(`/practice`, { state: { poses: poseName } });
+
+                  }
+
+                
+
+                  }  >Practice</Button>
                 </CardContent>
               </Card>
             </Grid>

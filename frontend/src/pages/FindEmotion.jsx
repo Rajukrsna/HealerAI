@@ -10,6 +10,16 @@ import "react-toastify/dist/ReactToastify.css";
 import happy from "../assets/happy.jpg"; 
 import sad from "../assets/sad.jpg";   
 import fear from "../assets/fear.jpg";
+import angry from "../assets/angry.jpg";
+import surprised from "../assets/Surprised.jpg";
+import guilt from "../assets/guilt.jpg";
+import jelous from "../assets/jelous.jpg";
+import disgust from "../assets/disgust.jpg";
+import pride from "../assets/pride.jpg";
+import shame from "../assets/shame.jpg";
+import love from "../assets/love.jpg";
+import calm from "../assets/calm.jpg";
+import axios from "axios";  
 const emotions = [
     "Happy", "Sad", "Angry", "Fear", "Surprised", "Disgust", "Jealousy", "Guilt", "Embarrassed",
     "Love", "Pride", "Shame", "Excited", "Bored", "Calm", "Anxious", "Grateful", "Lonely", "Hopeful",
@@ -28,8 +38,18 @@ const emotionImages = {
     Sad: sad ,
     Angry: "https://example.com/angry.jpg",
     Fear: fear,
-    Surprised: "https://example.com/surprised.jpg",
-    Disgust: "https://example.com/disgust.jpg",
+    Jealousy: jelous,
+    Guilt: guilt,   
+    Disgust: disgust,
+    Angry: angry,
+    Surprised: surprised,   
+    Embarrassed: "https://example.com/embarrassed.jpg",
+    Love: love,
+    Pride: pride,
+    Shame: shame,
+    Calm: calm,
+
+
     // Add images for other emotions
 };
 
@@ -47,7 +67,9 @@ const [yogas, setYogas] = useState([]);
     useEffect(() => {   
              const getDescription = async () => {   
                       try{
+                        console.log("hey",yogas);
                         const response = await axios.get("http://localhost:5000/api/description");
+                        console.log("hey",response.data);
                          setYogas(response.data);
                       }
                       catch(err){
@@ -124,7 +146,7 @@ const [yogas, setYogas] = useState([]);
 } )
         .catch((error) => toast.error("❌ Error: " + error.message, { position: "top-right" }));
     };
- const   filteredEmotions = emotions.filter((emotion) =>
+ const  filteredEmotions = emotions.filter((emotion) =>
         emotion.toLowerCase().includes(search.toLowerCase())
     );  
 
@@ -154,8 +176,9 @@ const [yogas, setYogas] = useState([]);
                     <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
                         <Card>
                         <CardActionArea onClick={() =>{
-                           
-                        navigate(`/description`, { state: { emotions: yogas[emotion] } })}
+                         const yogaData = yogas.find((item) => item.emotion === emotion);
+
+                        navigate(`/description`, { state: { emotions: yogaData } })}
                         } >
                         <CardMedia
                                     component="img"
